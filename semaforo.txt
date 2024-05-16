@@ -1,0 +1,32 @@
+#define pinRed 10
+#define pinYellow 9
+#define pinGreen 8
+#define btnPin 7
+
+void setup(){
+	pinMode(btnPin, INPUT);
+  	pinMode(pinRed, OUTPUT);
+  	pinMode(pinYellow, OUTPUT);
+  	pinMode(pinGreen, OUTPUT);
+}
+
+void loop(){
+  if(digitalRead(btnPin) == HIGH){
+  	digitalWrite(pinRed, HIGH);
+    delay(200);
+    digitalWrite(pinYellow, HIGH);
+    delay(200);
+    digitalWrite(pinGreen, HIGH);
+    delay(200);
+    digitalWrite(pinRed, LOW);
+    delay(200);
+    digitalWrite(pinRed, LOW);
+   	delay(200);
+    digitalWrite(pinRed, LOW);
+    delay(200);
+  }else{
+   	digitalWrite(pinRed, LOW);
+    digitalWrite(pinYellow, LOW);
+    digitalWrite(pinGreen, LOW);
+  }
+} 
